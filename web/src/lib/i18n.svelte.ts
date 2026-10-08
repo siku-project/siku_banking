@@ -27,7 +27,7 @@ export const applyTranslations = (language: string, web: Record<string, string>)
 }
 
 /**
- * The messages the interface calls, `m.menu_title()` and the like, typed
+ * The messages the interface calls, `m.nav_dashboard()` and the like, typed
  * from the compiled ones. Each call reads the pushed strings first.
  */
 export const m: Messages = new Proxy(compiled, {

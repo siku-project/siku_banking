@@ -43,6 +43,28 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  :root[data-theme='light'] {
+    --background: 214 33% 95%;
+    --foreground: 214 50% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 50% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 214 50% 9%;
+    --primary: 208 88% 69%;
+    --primary-foreground: 210 52% 4%;
+    --secondary: 214 24% 90%;
+    --secondary-foreground: 214 40% 16%;
+    --muted: 214 24% 90%;
+    --muted-foreground: 214 20% 42%;
+    --accent: 214 30% 88%;
+    --accent-foreground: 214 40% 14%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 22% 84%;
+    --input: 214 22% 84%;
+    --ring: 208 88% 55%;
+  }
+
   * {
     @apply border-border;
     scrollbar-width: none;
