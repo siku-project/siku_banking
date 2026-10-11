@@ -5,14 +5,14 @@
   import DevFab from '@/components/boilerplate/DevFab.svelte'
   import DevTopBar from '@/components/boilerplate/DevTopBar.svelte'
   import DevViewSelector from '@/components/boilerplate/DevViewSelector.svelte'
-  import MainView from '@/views/MainView.svelte'
+  import BankView from '@/views/BankView.svelte'
 
   const NONE = 'none'
   const STORAGE_KEY = 'siku_banking:dev:view'
 
   /** Every interface of the resource, by the name the selector shows. */
   const views: Record<string, Component> = {
-    Main: MainView,
+    Bank: BankView,
   }
 
   /** The view asked for in the URL wins, then the last one picked, then none. */
