@@ -4,26 +4,26 @@ import { locale } from './locale.svelte'
 
 describe('i18n', () => {
   it('serves the compiled message when the game sent nothing', () => {
-    expect(m.app_close()).toBe('Fermer')
+    expect(m.common_close()).toBe('Fermer')
   })
 
   it('prefers the string the game pushed for the running language', () => {
-    applyTranslations(locale.current, { app_close: 'Quitter' })
+    applyTranslations(locale.current, { common_close: 'Quitter' })
 
-    expect(m.app_close()).toBe('Quitter')
+    expect(m.common_close()).toBe('Quitter')
   })
 
   it('fills placeholders in a pushed string', () => {
-    applyTranslations(locale.current, { app_title: 'Interface {name}' })
+    applyTranslations(locale.current, { intro_greeting: 'Bienvenue, {name}' })
 
-    expect(m.app_title({ name: 'demo' })).toBe('Interface demo')
+    expect(m.intro_greeting({ name: 'Élise' })).toBe('Bienvenue, Élise')
   })
 
   it('switches the language along with the strings', () => {
-    applyTranslations('en', { app_close: 'Leave' })
+    applyTranslations('en', { common_close: 'Leave' })
 
     expect(locale.current).toBe('en')
-    expect(m.app_close()).toBe('Leave')
-    expect(m.app_hint()).toBe('Register your views in BoilerplateView and build from here.')
+    expect(m.common_close()).toBe('Leave')
+    expect(m.nav_soon()).toBe('Soon')
   })
 })

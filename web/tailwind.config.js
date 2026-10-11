@@ -44,12 +44,31 @@ export default {
       },
       textColor: {
         sk: {
-          DEFAULT: 'rgba(255, 255, 255, 0.96)',
-          body: 'rgba(255, 255, 255, 0.82)',
-          muted: 'rgba(255, 255, 255, 0.5)',
-          soft: 'rgba(255, 255, 255, 0.34)',
-          faint: 'rgba(255, 255, 255, 0.26)',
-          accent: '#9ed0fb',
+          DEFAULT: 'var(--sk-text)',
+          body: 'var(--sk-text-body)',
+          muted: 'var(--sk-text-muted)',
+          soft: 'var(--sk-text-soft)',
+          faint: 'var(--sk-text-faint)',
+          accent: 'var(--sk-accent-text)',
+        },
+      },
+      borderColor: {
+        sk: {
+          DEFAULT: 'var(--sk-border)',
+          soft: 'var(--sk-border-soft)',
+          hover: 'var(--sk-border-hover)',
+          accent: 'var(--sk-accent-border)',
+        },
+      },
+      backgroundColor: {
+        sk: {
+          panel: 'var(--sk-panel)',
+          surface: 'var(--sk-surface)',
+          quiet: 'var(--sk-quiet)',
+          hover: 'var(--sk-hover)',
+          rule: 'var(--sk-rule)',
+          tint: 'var(--sk-accent-tint)',
+          accent: 'var(--sk-accent)',
         },
       },
       borderRadius: {
@@ -59,7 +78,7 @@ export default {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        glow: '0 0 14px rgba(108, 182, 246, 0.7)',
+        glow: '0 0 14px var(--sk-accent-glow)',
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
